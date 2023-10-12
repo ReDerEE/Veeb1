@@ -1,0 +1,29 @@
+{
+  "name": "vp23",
+  "version": "1.0.0",
+  "description": "Veebiprogrammeerimiese kursuse projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ReDerEE@github.com/ReDerEE/Veeb1.git"
+  },
+  "keywords": [
+    "Veebiprogrammerimine",
+    "NodeJS",
+    "ExpressJS",
+    "TLU"
+  ],
+  "author": "Carl-Eric Sepp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReDerEE/Veeb1/issues"
+  },
+  "homepage": "https://github.com/ReDerEE/Veeb1#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
