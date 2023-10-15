@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Carl-Eric Sepp, veebiprogrammeerimimine 2023, miks nii pikk?</title>
+</head>
+<body>
+    <img src="banner/vp_banner_2023.png" alt="veebiprogrammeerimimise kursuse bänner">
+    <h1><%= h1 %></h1>
+    <ul>
+        <!--Teeme ejs tsükli, mis kõib läbi massiivi wisdoms-->
+        <% names.forEach (function(sentance){ %>
+            <li><%= sentance %></li>
+        <%});%>
+    </ul>
+    <p>See ei ole saladus, et olin siin ;)</p>
+    <hr>
+    <ul>
+        <li><a href="/">Avalehele</a></li>
+    </ul>
+    <hr>
+</body>
+</html>
