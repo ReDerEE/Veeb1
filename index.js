@@ -33,21 +33,21 @@ app.get('/wisdom', (req, res)=>{
 app.get('/names', (req, res)=>{
     let nameDateArray = []
     let nameArray = []
+    let dateArray = []
     fs.readFile('public/txtFiles/nameLog.txt', 'utf-8', (err, data)=>{
         if (err){
             throw err;
         }
         else{
-            nameDateArray = data.split(";")
-            for(i in nameArray){
-                nameDateArray[i]=nameDateArray[i].replace(",", " ");
-            nameDateArray.split(",");
-            for(i in nameArray){
-                nameArray.push()
+            nameDateArray = data.split(/[\;, ]+/)
+            nameDateArray.pop(-1);
+            for(let i = 0; i < nameDateArray.length ; i+=3){
+                console.log(i)
+                console.log(nameDateArray[i])
+                nameArray.push(nameDateArray[i]+" "+nameDateArray[i+1]);
+                dateArray.push(timeInfo.ENtoEE(nameDateArray[i+2]));
             }
-            }
-            nameArray.pop(-1);
-            res.render('namePage', {names: nameArray, h1: 'Inimesed, kes on külastanud'})
+            res.render('namePage', {names: nameArray,dates: dateArray, h1: 'Inimesed, kes on külastanud'})
             
         }
     })

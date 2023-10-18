@@ -7,12 +7,11 @@
 <body>
     <img src="banner/vp_banner_2023.png" alt="veebiprogrammeerimimise kursuse bänner">
     <h1><%= h1 %></h1>
-    <ul>
-        <!--Teeme ejs tsükli, mis kõib läbi massiivi wisdoms-->
-        <% names.forEach (function(sentance){ %>
-            <li><%= sentance %></li>
-        <%});%>
-    </ul>
+    <ol>
+        <% for(i in names){%>
+            <li><%=names[i]%>, mis salvestati <%=dates[i]%></li>
+        <%}%>
+    </ol>
     <p>See ei ole saladus, et olin siin ;)</p>
     <hr>
     <ul>

@@ -33,4 +33,12 @@ exports.formatTime = function(day, month, year){
     const monthNamesET = ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"];
     let formattedTime = (day+". "+monthNamesET[month]+" "+year);
     return formattedTime;
-};
+}
+exports.ENtoEE = function(dateString){
+    let EN = []
+    let EE = ""
+        EN = dateString.split("/");
+        EE = (EN[1]+"/"+EN[0]+"/"+EN[2])
+        return EE;
+}
+;
